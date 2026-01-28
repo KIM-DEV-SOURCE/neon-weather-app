@@ -19,8 +19,8 @@ const App = () => {
   const [inputFocused, setInputFocused] = useState(false);
   const [showForecast, setShowForecast] = useState(false);
   const [showHourly, setShowHourly] = useState(false);
-
-const APIKEY = '5e504237ca051fa89c89a923d42d2768'
+  
+const APIKEY = import.meta.env.VITE_WEATHER_API_KEY;
   const fetchWeather = async (CityName) => {
     if (!CityName.trim()) return;
     setLoading(true);
