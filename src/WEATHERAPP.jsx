@@ -90,19 +90,19 @@ const APIKEY = '5e504237ca051fa89c89a923d42d2768'
         if (!dailyData[dayKey]) {
           dailyData[dayKey] = {
     date: dayKey,
-  temp_max: item.main.temp_max,
- temp_min: item.main.temp_min,
+  temp_max: item.main.temp,
+ temp_min: item.main.temp,
             weather: item.weather[0],
             dateTimestamp: item.dt
           };
         } else {
           dailyData[dayKey].temp_max = Math.max(
             dailyData[dayKey].temp_max, 
-            item.main.temp_max
+            item.main.temp
           );
           dailyData[dayKey].temp_min = Math.min(
             dailyData[dayKey].temp_min, 
-            item.main.temp_min
+            item.main.temp
           );
         }
       });
